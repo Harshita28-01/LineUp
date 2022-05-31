@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.todolist.home.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_todayList"
+            app:destination="@id/todayList" />
+        <action
+            android:id="@+id/action_home_to_weekList"
+            app:destination="@id/weekList" />
+        <action
+            android:id="@+id/action_home_to_monthList"
+            app:destination="@id/monthList" />
+    </fragment>
+    <fragment
+        android:id="@+id/todayList"
+        android:name="com.example.todolist.lists.TodayList"
+        android:label="fragment_today_list"
+        tools:layout="@layout/fragment_today_list" />
+    <fragment
+        android:id="@+id/weekList"
+        android:name="com.example.todolist.lists.WeekList"
+        android:label="fragment_week_list"
+        tools:layout="@layout/fragment_week_list" />
+    <fragment
+        android:id="@+id/monthList"
+        android:name="com.example.todolist.lists.MonthList"
+        android:label="fragment_month_list"
+        tools:layout="@layout/fragment_month_list" />
+</navigation>
